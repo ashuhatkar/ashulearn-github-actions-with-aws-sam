@@ -25,5 +25,5 @@ jobs:
           aws-region: '${{ env.AWS_REGION }}'
       - run: sam build --use-container
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
-          --stack-name ashulearn-sam-python-lambda --s3-bucket vstiara-hosted-content
+          --stack-name ashulearn-sam-python-lambda --s3-bucket vstiara-deployment-content
           --capabilities CAPABILITY_IAM --region ${{ env.AWS_REGION }}
