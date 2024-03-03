@@ -24,7 +24,6 @@ jobs:
           aws-secret-access-key: '${{ secrets.AWS_SECRET_ACCESS_KEY }}'
           aws-region: '${{ env.AWS_REGION }}'
       - run: sam build --use-container
-      - run: >-
-          sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
+      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset
           --stack-name ashulearn-sam-python-lambda --s3-bucket vstiara-hosted-content
           --capabilities CAPABILITY_IAM --region ${{ env.AWS_REGION }}
