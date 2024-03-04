@@ -1,4 +1,4 @@
-name: Deploy main branch to Amazon Serverless
+name: Deploy main branch to Amazon Lambda Serverless
 'on':
   push:
     branches:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Setup .NET core sdk
+      - name: Setup python
         uses: actions/setup-python@v4
       - name: Setup SAM (Serverless Application Model)
         uses: aws-actions/setup-sam@v2
